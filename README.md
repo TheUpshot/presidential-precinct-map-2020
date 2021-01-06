@@ -47,7 +47,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - `FL`: ⚠️ counties publish results individually, and some do not release precinct-level results; the state will release a standardized, statewide file in January
 - `GA`: ✅
 - `HI`: ✅
-- `ID`
+- `ID`: ⚠️ many counties reported absentee votes countywide
 - `IL`: ⚠️ Cook County and City of Chicago results included, but statewide precinct results not yet available
 - `IN`: ❓ precinct results not yet available statewide
 - `IA`: ⚠️ Scott County does not provide machine-readable precinct-level data

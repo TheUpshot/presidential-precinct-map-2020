@@ -85,7 +85,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - `WA`: ✅
 - `WV`: ✅
 - `WI`: ✅
-- `WY`
+- `WY`: ✅
 
 ## Credits
 

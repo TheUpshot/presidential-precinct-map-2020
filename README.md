@@ -35,57 +35,57 @@ Please contact dear.upshot@nytimes.com if you have any concerns or questions abo
 
 Note: one of the most common causes of precinct data being unusable is "countywide" tabulations. This occurs when a county reports, say, all of its absentee ballots together as a single row in its Excel download (instead of precinct-by-precinct); because we can't attribute those ballot to specific precincts, that means that _all_ precincts in the county will be missing an indeterminite number of votes, and therefore can't be reliably mapped. In these cases, we drop the entire county from our GeoJSON.
 
-- `AL`: ❌ absentee and provisional results are reported countywide
-- `AK`: ❌ absentee, early, and provisional results are reported district-wide
-- `AZ`
-- `AR`: ❓ precinct results not yet available statewide
+- [`AL`](https://www.sos.alabama.gov/alabama-votes/voter/election-data): ❌ absentee and provisional results are reported countywide
+- [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide
+- [`AZ`](https://azsos.gov/2020-election-information)
+- [`AR`](https://results.enr.clarityelections.com/AR/106124)
 - `CA`: ⚠️ does not readily publish statewide precinct-level data, so we have to collect results and boundaries county-by-county, where available
-- `CO`: ✅
+- [`CO`](https://results.enr.clarityelections.com/CO/105975): ✅
 - `CT`: ⚠️ township-level results rather than precinct-level results
-- `DE`: ✅
-- `DC`: ✅
+- [`DE`](https://elections.delaware.gov/results/html/index.shtml?electionId=PR2020): ✅
+- [`DC`](https://electionresults.dcboe.org/election_results/2020-General-Election): ✅
 - `FL`: ⚠️ counties publish results individually, and some do not release precinct-level results; the state will release a standardized, statewide file in January
-- `GA`: ✅
-- `HI`: ✅
-- `ID`: ⚠️ many counties reported absentee votes countywide
+- [`GA`](https://results.enr.clarityelections.com/GA/105369): ✅
+- [`HI`](https://elections.hawaii.gov/election-results/): ✅
+- [`ID`](https://sos.idaho.gov/elections-division/election-results/): ⚠️ many counties reported absentee votes countywide
 - `IL`: ⚠️ Cook County and City of Chicago results included, but statewide precinct results not yet available
 - `IN`: ❓ precinct results not yet available statewide
-- `IA`: ⚠️ Scott County does not provide machine-readable precinct-level data
-- `KS`: ✅
-- `KY`: ❌ half of the counties report votes countywide
-- `LA`: ❌ early and provisional results are reported countywide
+- [`IA`](https://sos.iowa.gov/elections/results/precinctvotetotals2020general.html): ⚠️ Scott County does not provide machine-readable precinct-level data
+- `KS`
+- [`KY`](https://results.enr.clarityelections.com/KY/106379): ❌ half of the counties report votes countywide
+- [`LA`](https://voterportal.sos.la.gov/graphical): ❌ early and provisional results are reported countywide
 - `ME`: ⚠️ township-level results rather than precinct-level results
-- `MD`: ✅
-- `MA`: ✅
-- `MI`: ⚠️ only certain counties report results at the precinct level
-- `MN`: ✅
+- [`MD`](https://elections.maryland.gov/elections/2020/election_data/index.html): ✅
+- [`MA`](https://electionstats.state.ma.us/elections/view/140751/): ✅
+- [`MI`](https://electionreporting.com): ⚠️ only certain counties report results at the precinct level
+- [`MN`](https://www.sos.state.mn.us/elections-voting/election-results/2020/2020-general-election-results/2020-precinct-results-spreadsheet/): ✅
 - `MS`: ❓ precinct results not yet available statewide
 - `MO`: ❓ precinct results not yet available statewide
-- `MT`: ✅
-- `NE`: ✅
+- [`MT`](https://electionresults.mt.gov): ✅
+- [`NE`](https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=PRS&map=CTY): ✅
 - `NV`
 - `NH`: ⚠️ township-level results rather than precinct-level results
 - `NJ`: ❌ many counties report early, absentee, and/or provisional ballots countywide
-- `NM`: ✅
+- [`NM`](https://electionresults.sos.state.nm.us): ✅
 - `NY`
-- `NC`: ⚠️ about half of the counties reported early, absentee, or provisional ballots countywide
-- `ND`: ✅
-- `OH`: ✅
-- `OK`: ⚠️ Tulsa and Oklahoma Counties are excluded because they report absentee ballots countywide
+- [`NC`](https://www.ncsbe.gov/results-data/election-results/historical-election-results-data): ⚠️ about half of the counties reported early, absentee, or provisional ballots countywide
+- [`ND`](https://results.sos.nd.gov/Default.aspx?map=Cty): ✅
+- [`OH`](https://www.ohiosos.gov/elections/election-results-and-data/2020/): ✅
+- [`OK`](https://results.okelections.us/OKER/?elecDate=20201103): ⚠️ Tulsa and Oklahoma Counties are excluded because they report absentee ballots countywide
 - `OR`
 - `PA`: ⚠️ only certain counties report results at the precinct level
 - `RI`: ⚠️ township-level results rather than precinct-level results
-- `SC`: ❌ several types of ballots are reported countywide
-- `SD`: ⚠️ three counties reported absentee ballots countywide, and seven counties reported all votes countywide
-- `TN`
+- [`SC`](https://results.enr.clarityelections.com/SC/106502): ❌ several types of ballots are reported countywide
+- [`SD`](http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY): ⚠️ three counties reported absentee ballots countywide, and seven counties reported all votes countywide
+- [`TN`](https://sos.tn.gov/elections/results#2020)
 - `TX`: ⚠️ does not readily publish statewide precinct-level data, so we have to collect results and boundaries county-by-county, where available
 - `UT`: ❓ precinct results not yet available statewide
 - `VT`: ⚠️ township-level results rather than precinct-level results
-- `VA`: ❌ provisional and absentee votes are reported countywide
-- `WA`: ✅
-- `WV`: ✅
-- `WI`: ✅
-- `WY`: ✅
+- [`VA`](https://results.elections.virginia.gov/vaelections/2020%20November%20General/Site/Presidential.html): ❌ provisional and absentee votes are reported countywide
+- [`WA`](https://results.vote.wa.gov/results/20201103/export.html): ✅
+- [`WV`](https://results.enr.clarityelections.com/WV/106210): ✅
+- [`WI`](https://elections.wi.gov/elections-voting/results/2020/fall-general): ✅
+- [`WY`](https://sos.wyo.gov/Elections/Docs/2020/2020GeneralResults.aspx): ✅
 
 ## Credits
 

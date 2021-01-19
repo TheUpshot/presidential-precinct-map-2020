@@ -67,7 +67,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - `NH`: ⚠️ township-level results rather than precinct-level results
 - `NJ`: ❌ many counties report early, absentee, and/or provisional ballots countywide
 - [`NM`](https://electionresults.sos.state.nm.us): ✅
-- `NY`
+- `NY`: ✅
 - [`NC`](https://www.ncsbe.gov/results-data/election-results/historical-election-results-data): ⚠️ about half of the counties reported early, absentee, or provisional ballots countywide
 - [`ND`](https://results.sos.nd.gov/Default.aspx?map=Cty): ✅
 - [`OH`](https://www.ohiosos.gov/elections/election-results-and-data/2020/): ✅

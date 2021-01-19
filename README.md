@@ -10,7 +10,7 @@ Properties on each precinct polygon:
 - `votes_dem`: votes received by Joseph Biden
 - `votes_rep`: votes received by Donald Trump
 - `votes_total`: total votes in the precinct, including for third-party candidates
-- `votes_per_sqkm`: total votes divided by the area of the precinct, rounded to an integer
+- `votes_per_sqkm`: total votes divided by the area of the precinct, rounded to one decimal place
 - `pct_dem_lead`: `(votes_dem - votes_rep) / votes_total`, rounded to one decimal place (eg, `-21.3`)
 - `pct_dem_lead_change`: change in `pct_dem_lead` from 2016 to 2020, see note below
 

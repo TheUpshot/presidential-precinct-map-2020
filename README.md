@@ -19,7 +19,7 @@ Please contact dear.upshot@nytimes.com if you have any concerns or questions abo
 ## General caveats
 
 - when possible we used official 2020 precinct boundaries provided by states or counties, but in most cases we generated the boundaries ourselves at the Census block-group level using L2 voter files; this results in generally accurate boundaries, but can be inaccurate in no- or very-low-population areas like commercial areas and uninhabited rural land
-- the 2016 lead value is calculated from the nationwide dataset assembled by Ryne Rohla and [published in 2018 by The Upshot](https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html); since precinct boundaries may have changed and are approximate in both datasets, the 2016 and 2020 results are spatially joined by Census block-group, and `pct_dem_lead_change` should be considered a best-effort estimate
+- the 2016 lead value is calculated from the nationwide dataset assembled by Ryne Rohla and [published in 2018 by The Upshot](https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html); since precinct boundaries may have changed and are approximate in both datasets, the 2016 and 2020 results are spatially joined by their polygon overlaps, and `pct_dem_lead_change` should be considered a best-effort estimate
 - some of the results we gathered are unofficial/uncertified, since the certified tabulations hadn't yet been released
 - a very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON
 - a few areas, such as rural Maine, Vermont, and Hawaii, contain no voters, and those polygons are excluded from the GeoJSON

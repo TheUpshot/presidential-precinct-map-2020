@@ -37,7 +37,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 
 - [`AL`](https://www.sos.alabama.gov/alabama-votes/voter/election-data): ❌ absentee and provisional results are reported countywide
 - [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide
-- [`AZ`](https://azsos.gov/2020-election-information)
+- [`AZ`](https://azsos.gov/2020-election-information): ✅
 - [`AR`](https://results.enr.clarityelections.com/AR/106124)
 - `CA`: ⚠️ does not readily publish statewide precinct-level data, so we have to collect results and boundaries county-by-county, where available
 - [`CO`](https://results.enr.clarityelections.com/CO/105975): ✅
@@ -59,7 +59,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [`MA`](https://electionstats.state.ma.us/elections/view/140751/): ✅
 - [`MI`](https://electionreporting.com): ⚠️ only certain counties report results at the precinct level
 - [`MN`](https://www.sos.state.mn.us/elections-voting/election-results/2020/2020-general-election-results/2020-precinct-results-spreadsheet/): ✅
-- `MS`: ❓ precinct results not yet available statewide
+- [`MS`](https://www.sos.ms.gov/Elections-Voting/Pages/2020-General-Election.aspx): ✅
 - `MO`: ❓ precinct results not yet available statewide
 - [`MT`](https://electionresults.mt.gov): ✅
 - [`NE`](https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=PRS&map=CTY): ✅
@@ -77,7 +77,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - `RI`: ⚠️ township-level results rather than precinct-level results
 - [`SC`](https://results.enr.clarityelections.com/SC/106502): ❌ several types of ballots are reported countywide
 - [`SD`](http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY): ⚠️ three counties reported absentee ballots countywide, and seven counties reported all votes countywide
-- [`TN`](https://sos.tn.gov/elections/results#2020)
+- [`TN`](https://sos.tn.gov/elections/results#2020): ⚠️ Davidson County reports absentee ballots countywide
 - `TX`: ⚠️ does not readily publish statewide precinct-level data, so we have to collect results and boundaries county-by-county, where available
 - `UT`: ❓ precinct results not yet available statewide
 - `VT`: ⚠️ township-level results rather than precinct-level results
@@ -95,3 +95,5 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [Rachel Shorey](https://www.nytimes.com/by/rachel-shorey) and [Matthew Bloch](https://www.nytimes.com/by/matthew-bloch) calculated the precinct boundaries when official files weren't available
 - [Amanda Cox](https://www.nytimes.com/by/amanda-cox) and [Kevin Quealy](https://www.nytimes.com/by/kevin-quealy) provided editorial guidance
 - Additional scraping work by Rachel Shorey, [Quoctrung Bui](https://www.nytimes.com/by/quoctrung-bui), [Thu Trinh](https://github.com/trinhathu), and [Ben Smithgall](https://github.com/bsmithgall)
+- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) extracted vote counts from PDF images in Mississippi
+- [Don Johnson](https://twitter.com/htmldon) provided assistance matching Tennessee's precinct boundaries

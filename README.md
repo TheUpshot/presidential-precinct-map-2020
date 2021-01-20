@@ -38,7 +38,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [`AL`](https://www.sos.alabama.gov/alabama-votes/voter/election-data): ❌ absentee and provisional results are reported countywide
 - [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide
 - [`AZ`](https://azsos.gov/2020-election-information): ✅
-- [`AR`](https://results.enr.clarityelections.com/AR/106124)
+- [`AR`](https://results.enr.clarityelections.com/AR/106124): ⚠️ unable to map Phillips County
 - `CA`: ⚠️ does not readily publish statewide precinct-level data, so we have to collect results and boundaries county-by-county, where available
 - [`CO`](https://results.enr.clarityelections.com/CO/105975): ✅
 - `CT`: ⚠️ township-level results rather than precinct-level results
@@ -48,7 +48,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [`GA`](https://results.enr.clarityelections.com/GA/105369): ✅
 - [`HI`](https://elections.hawaii.gov/election-results/): ✅
 - [`ID`](https://sos.idaho.gov/elections-division/election-results/): ⚠️ many counties reported absentee votes countywide
-- `IL`: ⚠️ Cook County and City of Chicago results included, but statewide precinct results not yet available
+- [`IL`](https://www.elections.il.gov/ElectionOperations/ElectionVoteTotalsPrecinct.aspx?ID=8ehQy1Itjqo%3d&T=637465690113438072): ✅
 - `IN`: ❓ precinct results not yet available statewide
 - [`IA`](https://sos.iowa.gov/elections/results/precinctvotetotals2020general.html): ⚠️ Scott County does not provide machine-readable precinct-level data
 - `KS`

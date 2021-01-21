@@ -1,26 +1,26 @@
 # Presidential precinct data for the 2020 general election
 
-The Upshot scraped and standardized precinct election results from states and counties around the country, and joined this tabular data to precinct boundaries to create a nationwide election map. This map _does not_ have full coverage for every state: data availability and caveats for each state are listed below. We are releasing this data for re-use under the MIT license in this repository.
+The Upshot scraped and standardized precinct-level election results from around the country, and joined this tabular data to precinct GIS data to create a nationwide election map. This map _does not_ have full coverage for every state: data availability and caveats for each state are listed below, and statistics about coverage [are available here](https://int.nyt.com/newsgraphics/elections/map-data/2020/national/precincts-with-results-statistics.json). We are releasing this data for attributed re-use under the MIT license in this repository.
 
 The GeoJSON dataset can be downloaded at: https://int.nyt.com/newsgraphics/elections/map-data/2020/national/precincts-with-results.geojson.zip
 
 Properties on each precinct polygon:
 
-- `GEOID`: unique identifier for the precinct, formed from the five-digit county FIPS code followed by the precinct name/ID (eg, `30003-08`)
+- `GEOID`: unique identifier for the precinct, formed from the five-digit county FIPS code followed by the precinct name/ID (eg, `30003-08` or `39091-WEST MANSFIELD`)
 - `votes_dem`: votes received by Joseph Biden
 - `votes_rep`: votes received by Donald Trump
-- `votes_total`: total votes in the precinct, including for third-party candidates
+- `votes_total`: total votes in the precinct, including for third-party candidates and write-ins
 - `votes_per_sqkm`: total votes divided by the area of the precinct, rounded to one decimal place
-- `pct_dem_lead`: `(votes_dem - votes_rep) / votes_total`, rounded to one decimal place (eg, `-21.3`)
+- `pct_dem_lead`: `(votes_dem - votes_rep) / (votes_dem + votes_rep)`, rounded to one decimal place (eg, `-21.3`)
 - `pct_dem_lead_change`: change in `pct_dem_lead` from 2016 to 2020, see note below
 
 Please contact dear.upshot@nytimes.com if you have any concerns or questions about data quality, beyond the caveats we describe below.
 
 ## General caveats
 
-- when possible we used official 2020 precinct boundaries provided by states or counties, but in most cases we generated the boundaries ourselves at the Census block-group level using L2 voter files; this results in generally accurate boundaries, but can be inaccurate in no- or very-low-population areas like commercial areas and uninhabited rural land
-- the 2016 lead value is calculated from the nationwide dataset assembled by Ryne Rohla and [published in 2018 by The Upshot](https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html); since precinct boundaries may have changed and are approximate in both datasets, the 2016 and 2020 results are spatially joined by their polygon overlaps, and `pct_dem_lead_change` should be considered a best-effort estimate
-- some of the results we gathered are unofficial/uncertified, since the certified tabulations hadn't yet been released
+- where possible we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we had to generate boundaries ourselves, using L2 voter file points to guess the precinct for each Census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like commercial areas or uninhabited rural land
+- the 2016 lead value is calculated from the nationwide dataset assembled by Ryne Rohla and [published in 2018 by The Upshot](https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html); since precinct boundaries may have changed (and are approximations in both datasets), the 2016 and 2020 results are spatially joined by their polygon overlaps, and `pct_dem_lead_change` should be considered a best-effort estimate
+- some of the results we gathered are unofficial/uncertified, since the certified tabulations hadn't yet been released at time of gathering
 - a very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON
 - a few areas, such as rural Maine, Vermont, and Hawaii, contain no voters, and those polygons are excluded from the GeoJSON
 
@@ -33,7 +33,7 @@ Please contact dear.upshot@nytimes.com if you have any concerns or questions abo
 |❌|precinct data not usable|
 |❓|precinct data not yet available|
 
-Note: one of the most common causes of precinct data being unusable is "countywide" tabulations. This occurs when a county reports, say, all of its absentee ballots together as a single row in its Excel download (instead of precinct-by-precinct); because we can't attribute those ballot to specific precincts, that means that _all_ precincts in the county will be missing an indeterminite number of votes, and therefore can't be reliably mapped. In these cases, we drop the entire county from our GeoJSON.
+Note: one of the most common causes of precinct data being unusable is "countywide" tabulations. This occurs when a county reports, say, all of its absentee ballots together as a single row in its Excel download (instead of precinct-by-precinct); because we can't attribute those ballots to specific precincts, that means that _all_ precincts in the county will be missing an indeterminite number of votes, and therefore can't be reliably mapped. In these cases, we drop the entire county from our GeoJSON.
 
 - [`AL`](https://www.sos.alabama.gov/alabama-votes/voter/election-data): ❌ absentee and provisional results are reported countywide
 - [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide
@@ -92,7 +92,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [Alice Park](https://github.com/umalice) and [Miles Watkins](https://github.com/mileswwatkins) compiled the precinct results, manually joined them to the precinct boundries, and built the data processing pipeline
 - [Benjamin Rosenblatt](https://twitter.com/BenJ_Rosenblatt) collected results and boundaries county-by-county in New York State
 - [Charlie Smart](https://www.nytimes.com/by/charlie-smart) calculated `pct_dem_lead_change` and provided other technical support
-- [Rachel Shorey](https://www.nytimes.com/by/rachel-shorey) and [Matthew Bloch](https://www.nytimes.com/by/matthew-bloch) calculated the precinct boundaries when official files weren't available
+- [Rachel Shorey](https://www.nytimes.com/by/rachel-shorey) and [Matthew Bloch](https://www.nytimes.com/by/matthew-bloch) calculated the precinct boundaries wherever official GIS files weren't available
 - [Amanda Cox](https://www.nytimes.com/by/amanda-cox) and [Kevin Quealy](https://www.nytimes.com/by/kevin-quealy) provided editorial guidance
 - Additional scraping work by Rachel Shorey, [Quoctrung Bui](https://www.nytimes.com/by/quoctrung-bui), [Thu Trinh](https://github.com/trinhathu), and [Ben Smithgall](https://github.com/bsmithgall)
 - [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) extracted vote counts from PDF images in Mississippi

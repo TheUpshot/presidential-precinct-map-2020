@@ -39,9 +39,9 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide
 - [`AZ`](https://azsos.gov/2020-election-information): ✅
 - [`AR`](https://results.enr.clarityelections.com/AR/106124): ⚠️ unable to map Phillips County
-- `CA`: ⚠️ does not readily publish statewide precinct-level data, so we have to collect results and boundaries county-by-county, where available
+- `CA`: ⚠️ does not publish statewide precinct-level data, so we have to collect results and boundaries county-by-county, where available
 - [`CO`](https://results.enr.clarityelections.com/CO/105975): ✅
-- `CT`: ⚠️ township-level results rather than precinct-level results
+- [`CT`](https://ctemspublic.pcctg.net/#/home): ⚠️ township-level results rather than precinct-level results
 - [`DE`](https://elections.delaware.gov/results/html/index.shtml?electionId=PR2020): ✅
 - [`DC`](https://electionresults.dcboe.org/election_results/2020-General-Election): ✅
 - `FL`: ⚠️ counties publish results individually, and some do not release precinct-level results; the state will release a standardized, statewide file in January
@@ -49,9 +49,9 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [`HI`](https://elections.hawaii.gov/election-results/): ✅
 - [`ID`](https://sos.idaho.gov/elections-division/election-results/): ⚠️ many counties reported absentee votes countywide
 - [`IL`](https://www.elections.il.gov/ElectionOperations/ElectionVoteTotalsPrecinct.aspx?ID=8ehQy1Itjqo%3d&T=637465690113438072): ✅
-- `IN`: ❓ precinct results not yet available statewide
+- [`IN`](https://enr.indianavoters.in.gov/site/index.html): ❓ precinct results not yet available statewide
 - [`IA`](https://sos.iowa.gov/elections/results/precinctvotetotals2020general.html): ⚠️ Scott County does not provide machine-readable precinct-level data
-- `KS`
+- [`KS`](https://sos.ks.gov/elections/elections-statistics.html)
 - [`KY`](https://results.enr.clarityelections.com/KY/106379): ❌ half of the counties report votes countywide
 - [`LA`](https://voterportal.sos.la.gov/graphical): ❌ early and provisional results are reported countywide
 - `ME`: ⚠️ township-level results rather than precinct-level results
@@ -63,11 +63,11 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - `MO`: ❓ precinct results not yet available statewide
 - [`MT`](https://electionresults.mt.gov): ✅
 - [`NE`](https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=PRS&map=CTY): ✅
-- `NV`
+- [`NV`](https://www.nvsos.gov/sos/elections/election-information/precinct-level-results_)
 - `NH`: ⚠️ township-level results rather than precinct-level results
 - `NJ`: ❌ many counties report early, absentee, and/or provisional ballots countywide
 - [`NM`](https://electionresults.sos.state.nm.us): ✅
-- [`NY`]: ⚠️ the 22nd congressional district is still under recount, and is not included
+- `NY`: ⚠️ the 22nd congressional district is still under recount, and is not included
 - [`NC`](https://www.ncsbe.gov/results-data/election-results/historical-election-results-data): ⚠️ about half of the counties reported early, absentee, or provisional ballots countywide
 - [`ND`](https://results.sos.nd.gov/Default.aspx?map=Cty): ✅
 - [`OH`](https://www.ohiosos.gov/elections/election-results-and-data/2020/): ✅

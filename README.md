@@ -38,7 +38,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [`AL`](https://www.sos.alabama.gov/alabama-votes/voter/election-data): ❌ absentee and provisional results are reported countywide
 - [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide
 - [`AZ`](https://azsos.gov/2020-election-information): ✅
-- [`AR`](https://results.enr.clarityelections.com/AR/106124): ⚠️ unable to map Phillips County
+- [`AR`](https://results.enr.clarityelections.com/AR/106124): ⚠️ we could not generate or procure precinct maps for Jefferson County or Phillips County
 - `CA`: ⚠️ does not publish statewide precinct-level data, so we have to collect results and boundaries county-by-county, where available
 - [`CO`](https://results.enr.clarityelections.com/CO/105975): ✅
 - [`CT`](https://ctemspublic.pcctg.net/#/home): ⚠️ township-level results rather than precinct-level results
@@ -63,7 +63,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - `MO`: ❓ precinct results not yet available statewide
 - [`MT`](https://electionresults.mt.gov): ✅
 - [`NE`](https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=PRS&map=CTY): ✅
-- [`NV`](https://www.nvsos.gov/sos/elections/election-information/precinct-level-results_)
+- [`NV`](https://www.nvsos.gov/sos/elections/election-information/precinct-level-results_): ✅
 - `NH`: ⚠️ township-level results rather than precinct-level results
 - `NJ`: ❌ many counties report early, absentee, and/or provisional ballots countywide
 - [`NM`](https://electionresults.sos.state.nm.us): ✅

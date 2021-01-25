@@ -18,8 +18,10 @@ Please contact dear.upshot@nytimes.com if you have any concerns or questions abo
 
 ## General caveats
 
-- where possible we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we had to generate boundaries ourselves, using L2 voter file points to guess the precinct for each Census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like commercial areas or uninhabited rural land
-- the 2016 lead value is calculated from the nationwide dataset assembled by Ryne Rohla and [published in 2018 by The Upshot](https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html); since precinct boundaries may have changed (and are approximations in both datasets), the 2016 and 2020 results are spatially joined by their polygon overlaps, and `pct_dem_lead_change` should be considered a best-effort estimate
+- where possible we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we had to generate boundaries ourselves, using L2 voter-file points to guess the precinct for each Census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like commercial areas or uninhabited rural land
+- the 2016 lead value is calculated from the nationwide dataset assembled by Ryne Rohla and [published in 2018 by The Upshot](https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html); since precinct boundaries may have changed (and are approximations in both datasets in the first place), the 2016 and 2020 results are spatially joined by their polygon overlaps, and `pct_dem_lead_change` should be considered _a best-effort estimate_
+  - when inspecting the map of `pct_dem_lead_change`, look for geographic _clusters_ of precincts rather than individual outlier precincts; a single large `pct_dem_lead_change` value may just be an artifact of the spatial join
+  - spatially joining our precinct GeoJSON to other geographic data will likely result in similar pain points
 - some of the results we gathered are unofficial/uncertified, since the certified tabulations hadn't yet been released at time of gathering
 - a very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON
 - a few areas, such as rural Maine, Vermont, and Hawaii, contain no voters, and those polygons are excluded from the GeoJSON
@@ -72,7 +74,7 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [`ND`](https://results.sos.nd.gov/Default.aspx?map=Cty): ✅
 - [`OH`](https://www.ohiosos.gov/elections/election-results-and-data/2020/): ✅
 - [`OK`](https://results.okelections.us/OKER/?elecDate=20201103): ⚠️ Tulsa and Oklahoma Counties are excluded because they report absentee ballots countywide
-- `OR`
+- [`OR`](https://github.com/openelections/openelections-data-or/tree/master/2020): ✅
 - `PA`: ⚠️ only certain counties report results at the precinct level
 - `RI`: ⚠️ township-level results rather than precinct-level results
 - [`SC`](https://results.enr.clarityelections.com/SC/106502): ❌ several types of ballots are reported countywide
@@ -95,5 +97,5 @@ Note: one of the most common causes of precinct data being unusable is "countywi
 - [Rachel Shorey](https://www.nytimes.com/by/rachel-shorey) and [Matthew Bloch](https://www.nytimes.com/by/matthew-bloch) calculated the precinct boundaries wherever official GIS files weren't available
 - [Amanda Cox](https://www.nytimes.com/by/amanda-cox) and [Kevin Quealy](https://www.nytimes.com/by/kevin-quealy) provided editorial guidance
 - Additional scraping work by Rachel Shorey, [Quoctrung Bui](https://www.nytimes.com/by/quoctrung-bui), [Thu Trinh](https://github.com/trinhathu), and [Ben Smithgall](https://github.com/bsmithgall)
-- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) extracted vote counts from PDF images in Mississippi
+- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) extracted vote counts from PDFs in Mississippi and Oregon
 - [Don Johnson](https://twitter.com/htmldon) provided assistance matching Tennessee's precinct boundaries

@@ -18,13 +18,13 @@ Please contact dear.upshot@nytimes.com if you have any questions about data qual
 
 ## General caveats
 
-- where possible we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we generated boundaries ourselves, using L2 voter-file points to guess the precinct for each Census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like commercial areas or uninhabited rural land
-  - because of this, spatially joining our precinct GeoJSON to other geographic datasets will likely yield less-than-ideal output
-- some of the results we gathered are unofficial/uncertified, since the certified tabulations hadn't yet been released at time of gathering
-- a very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON
-- a few areas, such as rural Maine, Vermont, and Hawaii, contain no voters, and those polygons are excluded from the GeoJSON
+- Where possible, we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we generated boundaries ourselves, using L2 voter-file points to guess the precinct for each census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like commercial areas or uninhabited rural land.
+  - Because of this, spatially joining our precinct GeoJSON to other geographic datasets will most likely yield less-than-ideal output.
+- Some of the results we gathered are unofficial/uncertified, since the certified tabulations hadn't yet been released at time of gathering.
+- A very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON.
+- A few areas, such as rural Maine, Vermont and Hawaii, contain no voters, and those polygons are excluded from the GeoJSON.
 
-## State by state data availability and caveats
+## State-by-state data availability and caveats
 
 |symbol|meaning|
 |:----:|:------|
@@ -33,7 +33,7 @@ Please contact dear.upshot@nytimes.com if you have any questions about data qual
 |❌|precinct data not usable|
 |❓|precinct data not yet available|
 
-Note: one of the most common causes of precinct data being unusable is "countywide" tabulations. This occurs when a county reports, say, all of its absentee ballots together as a single row in its Excel download (instead of precinct-by-precinct); because we can't attribute those ballots to specific precincts, that means that _all_ precincts in the county will be missing an indeterminite number of votes, and therefore can't be reliably mapped. In these cases, we drop the entire county from our GeoJSON.
+Note: One of the most common causes of precinct data being unusable is "countywide" tabulations. This occurs when a county reports, say, all of its absentee ballots together as a single row in its Excel download (instead of precinct-by-precinct); because we can't attribute those ballots to specific precincts, that means that _all_ precincts in the county will be missing an indeterminite number of votes, and therefore can't be reliably mapped. In these cases, we drop the entire county from our GeoJSON.
 
 - [`AL`](https://www.sos.alabama.gov/alabama-votes/voter/election-data): ❌ absentee and provisional results are reported countywide
 - [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide

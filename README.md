@@ -18,7 +18,7 @@ Please contact dear.upshot@nytimes.com if you have any questions about data qual
 
 ## General caveats
 
-- where possible we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we had to generate boundaries ourselves, using L2 voter-file points to guess the precinct for each Census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like commercial areas or uninhabited rural land
+- where possible we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we generated boundaries ourselves, using L2 voter-file points to guess the precinct for each Census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like commercial areas or uninhabited rural land
   - because of this, spatially joining our precinct GeoJSON to other geographic datasets will likely yield less-than-ideal output
 - some of the results we gathered are unofficial/uncertified, since the certified tabulations hadn't yet been released at time of gathering
 - a very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON

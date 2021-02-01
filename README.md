@@ -12,7 +12,7 @@ Properties on each precinct polygon:
 - `votes_total`: total votes in the precinct, including for third-party candidates and write-ins
 - `votes_per_sqkm`: total votes divided by the area of the precinct, rounded to one decimal place
 - `pct_dem_lead`: `(votes_dem - votes_rep) / (votes_dem + votes_rep)`, rounded to one decimal place (eg, `-21.3`)
-  - due to licensing restrictions, we are unable to include the 2016-to-2020-change-in-`pct_dem_lead` field that appears in our interactive graphic
+  - due to licensing restrictions, we are unable to include the 2016-to-2020-change-in-`pct_dem_lead` field that appears in the map
 
 Please contact dear.upshot@nytimes.com if you have any questions about data quality or sourcing, beyond the caveats we describe below.
 

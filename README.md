@@ -52,7 +52,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`IL`](https://www.elections.il.gov/ElectionOperations/ElectionVoteTotalsPrecinct.aspx?ID=8ehQy1Itjqo%3d&T=637465690113438072): ✅
 - [`IN`](https://enr.indianavoters.in.gov/site/index.html): ❓ precinct results not yet available statewide
 - [`IA`](https://sos.iowa.gov/elections/results/precinctvotetotals2020general.html): ⚠️ Scott County does not provide machine-readable precinct-level data
-- [`KS`](https://sos.ks.gov/elections/elections-statistics.html): ❓ have yet to procure boundaries that match the precinct results, since many precincts are merged in results reporting
+- [`KS`](https://sos.ks.gov/elections/elections-statistics.html): ✅
 - [`KY`](https://results.enr.clarityelections.com/KY/106379): ❌ half of the counties report votes countywide
 - [`LA`](https://voterportal.sos.la.gov/graphical): ❌ early and provisional results are reported countywide
 - `ME`: ⚠️ township-level results rather than precinct-level results
@@ -80,7 +80,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`SD`](http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY): ⚠️ three counties report absentee ballots countywide, and seven counties report all votes countywide
 - [`TN`](https://sos.tn.gov/elections/results#2020): ⚠️ Davidson County reports absentee ballots countywide
 - `TX`: ⚠️ precinct results not yet available statewide
-- `UT`: ❓ precinct results not yet available statewide
+- [`UT`](https://github.com/openelections/openelections-data-ut/tree/master/2020): ✅
 - `VT`: ⚠️ township-level results rather than precinct-level results
 - [`VA`](https://results.elections.virginia.gov/vaelections/2020%20November%20General/Site/Presidential.html): ❌ provisional and absentee votes are reported countywide
 - [`WA`](https://results.vote.wa.gov/results/20201103/export.html): ✅
@@ -91,10 +91,11 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 ## Credits
 
 - [Alice Park](https://github.com/umalice) and [Miles Watkins](https://github.com/mileswwatkins) compiled the precinct results, manually joined them to the precinct boundries, and built the data processing pipeline
-- [Benjamin Rosenblatt](https://twitter.com/BenJ_Rosenblatt) collected results and boundaries county-by-county in New York State
+- [Benjamin Rosenblatt](https://twitter.com/BenJ_Rosenblatt) collected results and boundaries for New York State
+- [The Voting and Election Science Team](http://www.electproject.org/home/precinct_data) collected results and boundaries for Kansas
 - [Charlie Smart](https://www.nytimes.com/by/charlie-smart) provided geospatial technical support
 - [Rachel Shorey](https://www.nytimes.com/by/rachel-shorey) and [Matthew Bloch](https://www.nytimes.com/by/matthew-bloch) calculated the precinct boundaries wherever official GIS files weren't available
 - [Amanda Cox](https://www.nytimes.com/by/amanda-cox) and [Kevin Quealy](https://www.nytimes.com/by/kevin-quealy) provided editorial guidance
 - Additional scraping work by Rachel Shorey, [Quoctrung Bui](https://www.nytimes.com/by/quoctrung-bui), [Thu Trinh](https://github.com/trinhathu), and [Ben Smithgall](https://github.com/bsmithgall)
-- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) extracted vote counts from PDFs in Mississippi and Oregon
+- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) aggregated and extracted vote counts from PDFs in Mississippi, Oregon, and Utah
 - [Don Johnson](https://twitter.com/htmldon) provided assistance matching Tennessee's precinct boundaries

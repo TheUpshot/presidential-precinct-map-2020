@@ -58,7 +58,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - `ME`: ⚠️ township-level results rather than precinct-level results
 - [`MD`](https://elections.maryland.gov/elections/2020/election_data/index.html): ✅
 - [`MA`](https://electionstats.state.ma.us/elections/view/140751/): ✅
-- [`MI`](https://electionreporting.com): ⚠️ only certain counties report results at the precinct level
+- [`MI`](https://electionreporting.com): ⚠️ only certain counties report results at the precinct level, while some use [their own reporting websites](https://electionresults.ewashtenaw.org/electionreporting/nov2020/canvassreport2.html)
 - [`MN`](https://www.sos.state.mn.us/elections-voting/election-results/2020/2020-general-election-results/2020-precinct-results-spreadsheet/): ✅
 - [`MS`](https://www.sos.ms.gov/Elections-Voting/Pages/2020-General-Election.aspx): ✅
 - `MO`: ❓ precinct results not yet available statewide

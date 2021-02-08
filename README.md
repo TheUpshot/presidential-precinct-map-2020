@@ -11,7 +11,7 @@ Properties on each precinct polygon:
 - `votes_rep`: votes received by Donald Trump
 - `votes_total`: total votes in the precinct, including for third-party candidates and write-ins
 - `votes_per_sqkm`: total votes divided by the area of the precinct, rounded to one decimal place
-- `pct_dem_lead`: `(votes_dem - votes_rep) / (votes_dem + votes_rep)`, rounded to one decimal place (eg, `-21.3`)
+- `pct_dem_lead`: `(votes_dem - votes_rep) / (votes_total)`, rounded to one decimal place (eg, `-21.3`)
 
 _Due to licensing restrictions, we are unable to include the 2016 election results that appear in our interactive map._
 

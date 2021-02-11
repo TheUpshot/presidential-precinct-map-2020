@@ -45,7 +45,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`CT`](https://ctemspublic.pcctg.net/#/home): ⚠️ township-level results rather than precinct-level results
 - [`DE`](https://elections.delaware.gov/results/html/index.shtml?electionId=PR2020): ✅
 - [`DC`](https://electionresults.dcboe.org/election_results/2020-General-Election): ✅
-- `FL`: ⚠️ precinct results not yet available statewide
+- [`FL`](https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/): ✅
 - [`GA`](https://results.enr.clarityelections.com/GA/105369): ✅
 - [`HI`](https://elections.hawaii.gov/election-results/): ✅
 - [`ID`](https://sos.idaho.gov/elections-division/election-results/): ⚠️ many counties report absentee votes countywide

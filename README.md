@@ -74,7 +74,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`OH`](https://www.ohiosos.gov/elections/election-results-and-data/2020/): ✅
 - [`OK`](https://results.okelections.us/OKER/?elecDate=20201103): ⚠️ Tulsa and Oklahoma Counties report absentee ballots countywide
 - [`OR`](https://github.com/openelections/openelections-data-or/tree/master/2020): ✅
-- `PA`: ⚠️ only certain counties report results at the precinct level
+- [`PA`](https://github.com/openelections/openelections-data-pa/tree/master/2020): ⚠️ three counties are not yet available at the precinct level
 - `RI`: ⚠️ township-level results rather than precinct-level results
 - [`SC`](https://results.enr.clarityelections.com/SC/106502): ❌ several types of ballots are reported countywide
 - [`SD`](http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY): ⚠️ three counties report absentee ballots countywide, and seven counties report all votes countywide
@@ -97,5 +97,5 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [Rachel Shorey](https://www.nytimes.com/by/rachel-shorey) and [Matthew Bloch](https://www.nytimes.com/by/matthew-bloch) calculated the precinct boundaries wherever official GIS files weren't available
 - [Amanda Cox](https://www.nytimes.com/by/amanda-cox) and [Kevin Quealy](https://www.nytimes.com/by/kevin-quealy) provided editorial guidance
 - Additional scraping work by Rachel Shorey, [Quoctrung Bui](https://www.nytimes.com/by/quoctrung-bui), [Thu Trinh](https://github.com/trinhathu), and [Ben Smithgall](https://github.com/bsmithgall)
-- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) aggregated and extracted vote counts from PDFs in Mississippi, Oregon, and Utah
+- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) aggregated and extracted vote counts from PDFs in Mississippi, Oregon, Pennsylvania, and Utah
 - [Don Johnson](https://twitter.com/htmldon) provided assistance matching Tennessee's precinct boundaries

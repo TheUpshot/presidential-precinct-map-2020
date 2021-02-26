@@ -76,7 +76,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`OR`](https://github.com/openelections/openelections-data-or/tree/master/2020): ✅
 - [`PA`](https://github.com/openelections/openelections-data-pa/tree/master/2020): ⚠️ Luzerne and Delaware Counties are not yet available at the precinct level
 - `RI`: ⚠️ township-level results rather than precinct-level results
-- [`SC`](https://results.enr.clarityelections.com/SC/106502): ❌ several types of ballots are reported countywide
+- [`SC`](https://results.enr.clarityelections.com/SC/106502): ✅
 - [`SD`](http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY): ⚠️ three counties report absentee ballots countywide, and seven counties report all votes countywide
 - [`TN`](https://sos.tn.gov/elections/results#2020): ⚠️ Davidson County reports absentee ballots countywide
 - `TX`: ⚠️ precinct results not yet available statewide

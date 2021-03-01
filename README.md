@@ -69,7 +69,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - `NJ`: ❌ many counties report early, absentee, and/or provisional ballots countywide
 - [`NM`](https://electionresults.sos.state.nm.us): ✅
 - `NY`: ⚠️ still awaiting Oneida County results
-- [`NC`](https://www.ncsbe.gov/results-data/election-results/historical-election-results-data): ⚠️ many counties report early, absentee, or provisional ballots countywide
+- [`NC`](https://www.ncsbe.gov/results-data/election-results/historical-election-results-data#precinct-sorted): ✅
 - [`ND`](https://results.sos.nd.gov/Default.aspx?map=Cty): ✅
 - [`OH`](https://www.ohiosos.gov/elections/election-results-and-data/2020/): ✅
 - [`OK`](https://results.okelections.us/OKER/?elecDate=20201103): ⚠️ Tulsa and Oklahoma Counties report absentee ballots countywide
@@ -79,7 +79,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`SC`](https://results.enr.clarityelections.com/SC/106502): ✅
 - [`SD`](http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY): ⚠️ three counties report absentee ballots countywide, and seven counties report all votes countywide
 - [`TN`](https://sos.tn.gov/elections/results#2020): ⚠️ Davidson County reports absentee ballots countywide
-- `TX`: ⚠️ precinct results not yet available statewide
+- [`TX`](https://data.capitol.texas.gov/dataset/2020_general/resource/b7fe3d1b-fbb1-40c8-b4d2-b86462e0a740): ✅
 - [`UT`](https://github.com/openelections/openelections-data-ut/tree/master/2020): ✅
 - `VT`: ⚠️ township-level results rather than precinct-level results
 - [`VA`](https://results.elections.virginia.gov/vaelections/2020%20November%20General/Site/Presidential.html): ❌ provisional and absentee votes are reported countywide

@@ -21,7 +21,7 @@ Please contact dear.upshot@nytimes.com if you have any questions about data qual
 
 - Where possible, we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we generated boundaries ourselves, using L2 voter-file points to guess the precinct for each census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like business parks or uninhabited rural land.
   - Because of this, spatially joining our precinct GeoJSON to other geographic datasets will most likely yield less-than-ideal output.
-- Some of the results we gathered are unofficial/uncertified, since the certified tabulations hadn't yet been released at time of gathering.
+- Some of the results we gathered are marginally incomplete. A few states' data are unofficial, since the certified results hadn't been released at time of collection. Additionally, our vote totals are slightly off whenever write-ins are not reported in the data source.
 - A very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON.
 - A few areas, such as rural Maine, Vermont and Hawaii, contain no voters, and those polygons are excluded from the GeoJSON.
 
@@ -32,7 +32,6 @@ Please contact dear.upshot@nytimes.com if you have any questions about data qual
 |✅|have gathered data, no significant caveats|
 |⚠️|have gathered data, but doesn't cover entire state or has other significant caveats|
 |❌|precinct data not usable|
-|❓|precinct data not yet available|
 
 Note: One of the most common causes of precinct data being unusable is "countywide" tabulations. This occurs when a county reports, say, all of its absentee ballots together as a single row in its Excel download (instead of precinct-by-precinct); because we can't attribute those ballots to specific precincts, that means that _all_ precincts in the county will be missing an indeterminite number of votes, and therefore can't be reliably mapped. In these cases, we drop the entire county from our GeoJSON.
 
@@ -40,9 +39,9 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide
 - [`AZ`](https://azsos.gov/2020-election-information): ✅
 - [`AR`](https://results.enr.clarityelections.com/AR/106124): ⚠️ we could not generate or procure precinct maps for Jefferson County or Phillips County
-- `CA`: ⚠️ only certain counties report results at the precinct level, additional collection is in progress
+- `CA`: ⚠️ data collection not yet complete
 - [`CO`](https://results.enr.clarityelections.com/CO/105975): ✅
-- [`CT`](https://ctemspublic.pcctg.net/#/home): ⚠️ township-level results rather than precinct-level results
+- `CT`: ⚠️ township-level results rather than precinct-level results
 - [`DE`](https://elections.delaware.gov/results/html/index.shtml?electionId=PR2020): ✅
 - [`DC`](https://electionresults.dcboe.org/election_results/2020-General-Election): ✅
 - [`FL`](https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/): ✅
@@ -58,7 +57,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - `ME`: ⚠️ township-level results rather than precinct-level results
 - [`MD`](https://elections.maryland.gov/elections/2020/election_data/index.html): ✅
 - [`MA`](https://electionstats.state.ma.us/elections/view/140751/): ✅
-- [`MI`](https://electionreporting.com): ⚠️ only certain counties report results at the precinct level
+- [`MI`](https://github.com/openelections/openelections-data-mi/tree/master/2020): ⚠️ data collection not yet complete
 - [`MN`](https://www.sos.state.mn.us/elections-voting/election-results/2020/2020-general-election-results/2020-precinct-results-spreadsheet/): ✅
 - [`MS`](https://www.sos.ms.gov/Elections-Voting/Pages/2020-General-Election.aspx): ✅
 - [`MO`](https://github.com/openelections/openelections-sources-mo/blob/master/2020/general/Final%20Precinct%20data%202020%20-%20amendments%20on%20separate%20tab.xlsx): ⚠️ almost all counties report absentee votes countywide
@@ -66,15 +65,15 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`NE`](https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=PRS&map=CTY): ✅
 - [`NV`](https://www.nvsos.gov/sos/elections/election-information/precinct-level-results_): ✅
 - `NH`: ⚠️ township-level results rather than precinct-level results
-- `NJ`: ❌ many counties report early, absentee, and/or provisional ballots countywide
+- [`NJ`](https://www.nj.gov/state/elections/election-information-2020.shtml#general): ⚠️ township-level results rather than precinct-level results
 - [`NM`](https://electionresults.sos.state.nm.us): ✅
-- `NY`: ⚠️ still awaiting Oneida County results
+- `NY`: ✅
 - [`NC`](https://www.ncsbe.gov/results-data/election-results/historical-election-results-data#precinct-sorted): ✅
 - [`ND`](https://results.sos.nd.gov/Default.aspx?map=Cty): ✅
 - [`OH`](https://www.ohiosos.gov/elections/election-results-and-data/2020/): ✅
-- [`OK`](https://results.okelections.us/OKER/?elecDate=20201103): ⚠️ Tulsa and Oklahoma Counties report absentee ballots countywide
+- [`OK`](https://results.okelections.us/OKER/?elecDate=20201103): ⚠️ Tulsa County and Oklahoma County report absentee ballots countywide
 - [`OR`](https://github.com/openelections/openelections-data-or/tree/master/2020): ✅
-- [`PA`](https://github.com/openelections/openelections-data-pa/tree/master/2020): ⚠️ Luzerne and Delaware Counties are not yet available at the precinct level
+- [`PA`](https://github.com/openelections/openelections-data-pa/tree/master/2020): ⚠️ Luzerne County and Delaware County are not yet available at the precinct level
 - `RI`: ⚠️ township-level results rather than precinct-level results
 - [`SC`](https://results.enr.clarityelections.com/SC/106502): ✅
 - [`SD`](http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY): ⚠️ three counties report absentee ballots countywide, and seven counties report all votes countywide
@@ -91,11 +90,11 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 ## Credits
 
 - [Alice Park](https://github.com/umalice) and [Miles Watkins](https://github.com/mileswwatkins) compiled the precinct results, manually joined them to the precinct boundries, and built the data processing pipeline
+- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) aggregated and extracted vote counts from PDFs in Michigan, Mississippi, Oregon, Pennsylvania, and Utah, and provided raw data for Missouri
 - [Benjamin Rosenblatt](https://twitter.com/BenJ_Rosenblatt) collected results and boundaries for New York State
 - [The Voting and Election Science Team](http://www.electproject.org/home/precinct_data) collected results and boundaries for Kansas
 - [Charlie Smart](https://www.nytimes.com/by/charlie-smart) provided geospatial technical support
 - [Rachel Shorey](https://www.nytimes.com/by/rachel-shorey) and [Matthew Bloch](https://www.nytimes.com/by/matthew-bloch) calculated the precinct boundaries wherever official GIS files weren't available
 - [Amanda Cox](https://www.nytimes.com/by/amanda-cox) and [Kevin Quealy](https://www.nytimes.com/by/kevin-quealy) provided editorial guidance
 - Additional scraping work by Rachel Shorey, [Quoctrung Bui](https://www.nytimes.com/by/quoctrung-bui), [Thu Trinh](https://github.com/trinhathu), and [Ben Smithgall](https://github.com/bsmithgall)
-- [Derek Willis](https://github.com/dwillis) and [Open Elections](http://openelections.net) aggregated and extracted vote counts from PDFs in Mississippi, Oregon, Pennsylvania, and Utah, and provided raw data for Missouri
 - [Don Johnson](https://twitter.com/htmldon) provided assistance matching Tennessee's precinct boundaries

@@ -49,7 +49,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`HI`](https://elections.hawaii.gov/election-results/): ✅
 - [`ID`](https://sos.idaho.gov/elections-division/election-results/): ⚠️ many counties report absentee votes countywide
 - [`IL`](https://www.elections.il.gov/ElectionOperations/ElectionVoteTotalsPrecinct.aspx?ID=8ehQy1Itjqo%3d&T=637465690113438072): ✅
-- [`IN`](https://enr.indianavoters.in.gov/site/index.html): ❓ precinct results not yet available statewide
+- [`IN`](https://enr.indianavoters.in.gov/site/index.html): ⚠️ state publishes machine-readable precinct results for only about half of counties
 - [`IA`](https://sos.iowa.gov/elections/results/precinctvotetotals2020general.html): ⚠️ Scott County does not provide machine-readable precinct-level data
 - [`KS`](https://sos.ks.gov/elections/elections-statistics.html): ✅
 - [`KY`](https://results.enr.clarityelections.com/KY/106379): ⚠️ only certain counties report results at the precinct level

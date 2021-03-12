@@ -21,9 +21,11 @@ Please contact dear.upshot@nytimes.com if you have any questions about data qual
 
 - Where possible, we used official precinct boundaries provided by the states or counties, but in most cases these were not available and we generated boundaries ourselves, using L2 voter-file points to guess the precinct for each census block group; this results in _generally accurate_ precinct boundaries, but can be rough in no- or very-low-population places like business parks or uninhabited rural land.
   - Because of this, spatially joining our precinct GeoJSON to other geographic datasets will most likely yield less-than-ideal output.
-- Some of the results we gathered are marginally incomplete. A few states' data are unofficial, since the certified results hadn't been released at time of collection. Additionally, our vote totals are slightly off whenever write-ins are not reported in the data source.
-- A very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON.
-- A few areas, such as rural Maine, Vermont and Hawaii, contain no voters, and those polygons are excluded from the GeoJSON.
+- Some of the results we gathered are slightly incomplete:
+  - A few states' data are unofficial, since the certified results hadn't been released at time of collection.
+  - Wherever write-ins are not reported by the data source, our vote totals are marginally off.
+  - A very small portion of the tabular precinct results (roughly 0.01%) could not be joined to the precinct boundaries, and thus these results are not present in the GeoJSON.
+- A few areas, such as rural Vermont, Hawaii, Nevada, and Nebraska, contain no voters, and those polygons are excluded from the GeoJSON.
 
 ## State-by-state data availability and caveats
 
@@ -39,7 +41,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`AK`](https://www.elections.alaska.gov/results/20GENR/index.php): ❌ absentee, early, and provisional results are reported district-wide
 - [`AZ`](https://azsos.gov/2020-election-information): ✅
 - [`AR`](https://results.enr.clarityelections.com/AR/106124): ⚠️ we could not generate or procure precinct maps for Jefferson County or Phillips County
-- `CA`: ⚠️ data collection not yet complete
+- [`CA`](https://statewidedatabase.org/d10/g20.html): ✅
 - [`CO`](https://results.enr.clarityelections.com/CO/105975): ✅
 - `CT`: ⚠️ township-level results rather than precinct-level results
 - [`DE`](https://elections.delaware.gov/results/html/index.shtml?electionId=PR2020): ✅

@@ -75,7 +75,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`OH`](https://www.ohiosos.gov/elections/election-results-and-data/2020/): ✅
 - [`OK`](https://results.okelections.us/OKER/?elecDate=20201103): ⚠️ Tulsa County and Oklahoma County report absentee ballots countywide
 - [`OR`](https://github.com/openelections/openelections-data-or/tree/master/2020): ✅
-- [`PA`](https://github.com/openelections/openelections-data-pa/tree/master/2020): ⚠️ Luzerne County and Delaware County are not yet available at the precinct level
+- [`PA`](https://github.com/openelections/openelections-data-pa/tree/master/2020): ✅
 - `RI`: ⚠️ township-level results rather than precinct-level results
 - [`SC`](https://results.enr.clarityelections.com/SC/106502): ✅
 - [`SD`](http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY): ⚠️ three counties report absentee ballots countywide, and seven counties report all votes countywide

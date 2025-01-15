@@ -65,7 +65,7 @@ Note: One of the most common causes of precinct data being unusable is "countywi
 - [`MO`](https://github.com/openelections/openelections-sources-mo/blob/master/2020/general/Final%20Precinct%20data%202020%20-%20amendments%20on%20separate%20tab.xlsx): ⚠️ almost all counties report absentee votes countywide
 - [`MT`](https://electionresults.mt.gov): ✅
 - [`NE`](https://electionresults.nebraska.gov/resultsSW.aspx?text=Race&type=PRS&map=CTY): ✅
-- [`NV`](https://www.nvsos.gov/sos/elections/election-information/precinct-level-results_): ✅
+- [`NV`](https://www.nvsos.gov/sos/elections/election-information/precinct-level-results): ✅
 - `NH`: ⚠️ township-level results rather than precinct-level results
 - [`NJ`](https://www.nj.gov/state/elections/election-information-2020.shtml#general): ⚠️ township-level results rather than precinct-level results
 - [`NM`](https://electionresults.sos.state.nm.us): ✅
